@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="container">
+    <div class="left-column">
+      <form class="form-group">
+        <label class="form-label" for="file-upload">Choose a file to upload:</label>
+        <input [(ngModel)]="file" class="form-control" type="file" id="file-upload" name="file-upload">
+      </form>
+      <div class="btn-container">
+        <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+      </div>
+    </div>
+   
+    <div *ngIf="file" class="right-column">
+        <h4>Preview</h4>
+        <figure *ngFor="let i of ans" class="img-container"><img [src]="i.url" alt="Example image"><figcaption>{{i.name}}</figcaption></figure>
+       
+      
+    </div>
+  </div>
+  
+
+  
