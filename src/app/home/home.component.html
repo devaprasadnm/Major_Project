@@ -11,11 +11,16 @@
     </div>
    
     <div *ngIf="file" class="right-column">
-        <h4>Segmented Images</h4>
-        <h6 *ngIf="flag">Loading...</h6>
-        <figure *ngFor="let i of ans" class="img-container"><img [src]="i.url" alt="Example image"><figcaption>{{i.name}}</figcaption></figure>
-       
-      
+        <h4 *ngIf="flag2">Segmented Images</h4>
+        <h6 *ngIf="flag1">Loading...</h6>
+        <div class="output">
+          <figure *ngFor="let i of ans" class="img-container"><img [src]="i.url" alt="Example image"><figcaption>{{i.name}}</figcaption></figure>
+        </div>
+        <!-- <h4 *ngIf="flag2">Original Images</h4>
+        <div class="output">
+          <figure *ngFor="let i of org" class="img-container"><img [src]="i.url" alt="Example image"><figcaption>{{i.name}}</figcaption></figure>
+          </div>
+       -->
     </div>
   </div>
   
