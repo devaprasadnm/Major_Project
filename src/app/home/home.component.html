@@ -6,12 +6,13 @@
         <input [(ngModel)]="file" class="form-control" type="file" id="file-upload" name="file-upload">
       </form>
       <div class="btn-container">
-        <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+        <button class="btn btn-primary" (click)="upload()">Upload</button>
       </div>
     </div>
    
     <div *ngIf="file" class="right-column">
-        <h4>Preview</h4>
+        <h4>Segmented Images</h4>
+        <h6 *ngIf="flag">Loading...</h6>
         <figure *ngFor="let i of ans" class="img-container"><img [src]="i.url" alt="Example image"><figcaption>{{i.name}}</figcaption></figure>
        
       
